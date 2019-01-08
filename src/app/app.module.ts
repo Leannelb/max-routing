@@ -10,7 +10,7 @@ import { ServersComponent } from './servers/servers.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
-import { Routes } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
 import { UserComponent } from './users/user/user.component';
 
 const appRoutes: Routes = [
@@ -32,7 +32,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule, 
+    RouterModule.forRoot(appRoutes),
+    // import routerModule and then call method forRoot to register routes for app
   ],
   providers: [ServersService],
   bootstrap: [AppComponent]
