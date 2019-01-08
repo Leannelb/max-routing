@@ -10,9 +10,10 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-   <a routerLink="servers">reload Page</a>
-<!-- because here we use a relative path here, we get an error: core.js:1673 ERROR Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'servers/servers'
-Error: Cannot match any routes. URL Segment: 'servers/servers' -->
+   <a routerLink="/servers">reload Page</a>
+<!-- if we hange it to a relative path /servers we dont get an error
+with a relative path: servers, the path is appended to the current path
+BUT with a  -->
   
     <app-edit-server></app-edit-server>
     <hr>
